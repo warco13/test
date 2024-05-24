@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Radar Chart</title>
+    <style>
+        .controls {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+        }
+        .control {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Radar Chart</h1>
+    <div class="controls">
+        <div class="control">
+            <label><input type="checkbox" id="option1" checked> Option 1</label>
+        </div>
+        <div class="control">
+            <label><input type="checkbox" id="option2" checked> Option 2</label>
+        </div>
+        <div class="control">
+            <label><input type="checkbox" id="option3" checked> Option 3</label>
+        </div>
+        <div class="control">
+            <label><input type="checkbox" id="option4" checked> Option 4</label>
+        </div>
+        <div class="control">
+            <label><input type="checkbox" id="option5" checked> Option 5</label>
+        </div>
+    </div>
+    <canvas id="radarChart" width="400" height="400"></canvas>
+
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
