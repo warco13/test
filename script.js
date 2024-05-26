@@ -42,16 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const radarChart = new Chart(ctx, config);
 
-    const selects = document.querySelectorAll('select');
+    const submitButton = document.getElementById('submit');
 
-    selects.forEach((select, index) => {
-        select.addEventListener('change', function() {
-            updateChartData(index, parseInt(this.value));
+    submitButton.addEventListener('click', function() {
+        const selects = document.querySelectorAll('select');
+        selects.forEach((select, index) => {
+            data.datasets[0].data[index] = parseInt(select.value);
         });
-    });
-
-    function updateChartData(index, value) {
-        data.datasets[0].data[index] = value;
         radarChart.update();
-    }
+    });
 });
