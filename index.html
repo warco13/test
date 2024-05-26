@@ -14,8 +14,10 @@
             margin-bottom: 10px;
         }
         canvas {
+            width: 300px; /* Set the desired width */
+            height: 300px; /* Set the desired height */
             max-width: 100%; /* Make the canvas responsive */
-            height: auto;
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
@@ -38,7 +40,7 @@
             <label><input type="checkbox" id="option5" checked> Option 5</label>
         </div>
     </div>
-    <canvas id="radarChart" width="300" height="300"></canvas>
+    <canvas id="radarChart" </canvas>
 
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
