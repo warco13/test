@@ -13,7 +13,22 @@
             padding-bottom: 20; /* Reduce bottom padding */
         }
         .control {
-            margin-bottom: 5px; /* Reduce space between controls */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px; /* Space between controls */
+        }
+        .control label {
+            flex: 1;
+            max-width: 70%;
+            margin-right: 10px;
+        }
+        .control select {
+            max-width: 25%;
+        }
+        .separator {
+            margin: 10px 0;
+            border-top: 1px solid #ccc;
         }
         canvas {
             max-width: 70%; /* Adjust to desired size */
@@ -24,7 +39,7 @@
     </style>
 </head>
 <body>
-    <h1>The Navigator/h1>
+    <h1>The Navigator </h1>
     <div class="controls">
         <h3>E1. Market Spaces</h3>
         <div class="control">
