@@ -45,10 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.getElementById('submit');
 
     submitButton.addEventListener('click', function() {
-        const selects = document.querySelectorAll('select');
-        selects.forEach((select, index) => {
-            data.datasets[0].data[index] = parseInt(select.value);
-        });
-        radarChart.update();
+        const averages = calculateAverages();
+        updateChartData(averages);
     });
+
+    function calculateAverages() {
+        const averages = [];
+        for (let i = 0; i < 12; i++) {
+            const start = i * 3;
+            const groupValues = [
+                parseInt(document.getElementById(`question${start + 1}`).value),
+                parseInt(document.getElementById(`question${start + 2}`).value),
+                parseInt(document.getElementById(`question${start + 3}`).value)
+            ];
+            const average = groupValues.reduce((sum, value) => sum + value, 0) / groupValues.length;
+            averages.push(average);
+        }
+        return averages;
+    }
+
+    function updateChartData(averages) {
+        data.datasets[0].data = averages;
+        radarChart.update();
+    }
 });
