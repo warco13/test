@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('radarChart').getContext('2d');
 
-    const initialData = [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; // Neutral as initial value for all
+    const initialData = [50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]; // Neutral as initial value for all
     const data = {
         labels: ['E1. Market Spaces', 'E2. Proposition Framing', 'E3. Customer Definition', 'E4. Distribution & Sales', 'I1. Tech Development and Depoloyment', 'I2. IP Management', 'I3. Product/Service Synthesis', 'I4. Manufacturing & Deployment', 'I5. Human Capital', 'I6. Financial Capital', 'C1. Strategic Positioning', 'C2. Business Model'],
         datasets: [{
