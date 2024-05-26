@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
             scales: {
                 r: {
                     angleLines: {
-                        display: false
+                        display: true
                     },
                     suggestedMin: 0,
-                    suggestedMax: 4
+                    suggestedMax: 100
                 }
             }
         }
