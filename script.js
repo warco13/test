@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('radarChart').getContext('2d');
 
-    const initialData = [20, 10, 4, 2, 6];
+    const initialData = [2, 2, 2, 2, 2]; // Neutral as initial value for all
     const data = {
         labels: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
         datasets: [{
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         display: false
                     },
                     suggestedMin: 0,
-                    suggestedMax: 20
+                    suggestedMax: 4
                 }
             }
         }
@@ -42,22 +42,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const radarChart = new Chart(ctx, config);
 
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const selects = document.querySelectorAll('select');
 
-    checkboxes.forEach((checkbox, index) => {
-        checkbox.addEventListener('change', function() {
-            updateChartData(index, this.checked ? initialData[index] : 0);
+    selects.forEach((select, index) => {
+        select.addEventListener('change', function() {
+            updateChartData(index, parseInt(this.value));
         });
     });
 
     function updateChartData(index, value) {
         data.datasets[0].data[index] = value;
         radarChart.update();
-    }
-
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 });
