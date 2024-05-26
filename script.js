@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const data = {
         labels: ['E1. Market Spaces', 'E2. Proposition Framing', 'E3. Customer Definition', 'E4. Distribution & Sales', 'I1. Tech Development and Depoloyment', 'I2. IP Management', 'I3. Product/Service Synthesis', 'I4. Manufacturing & Deployment', 'I5. Human Capital', 'I6. Financial Capital', 'C1. Strategic Positioning', 'C2. Business Model'],
         datasets: [{
-            label: 'My Dataset',
+            label: 'My Company',
             data: [...initialData],
             fill: true,
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             pointHoverBorderColor: 'rgb(255, 99, 132)'
         },
         {
-            label: 'CRL Scores',
+            label: 'Successful Company at same Stage',
             data: [...initialData], // Placeholder, will be updated on submit
             fill: true,
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
