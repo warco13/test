@@ -20,6 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
         type: 'radar',
         data: data,
         options: {
+            responsive: true, // Ensure the chart is responsive
+            maintainAspectRatio: false, // Allow custom aspect ratio
             elements: {
                 line: {
                     borderWidth: 3
