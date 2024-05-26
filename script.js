@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ctx = document.getElementById('radarChart').getContext('2d');
-    
+
+    const initialData = [20, 10, 4, 2, 6];
     const data = {
         labels: ['Option 1', 'Option 2', 'Option 3', 'Option 4', 'Option 5'],
         datasets: [{
             label: 'My Dataset',
-            data: [20, 10, 4, 2, 6],
+            data: [...initialData],
             fill: true,
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
             borderColor: 'rgb(255, 99, 132)',
@@ -20,6 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
         type: 'radar',
         data: data,
         options: {
+            responsive: true,
+            maintainAspectRatio: true,
             elements: {
                 line: {
                     borderWidth: 3
@@ -43,10 +46,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     checkboxes.forEach((checkbox, index) => {
         checkbox.addEventListener('change', function() {
-            data.datasets[0].data[index] = this.checked ? getRandomInt(1, 20) : 0;
-            radarChart.update();
+            updateChartData(index, this.checked ? initialData[index] : 0);
         });
     });
+
+    function updateChartData(index, value) {
+        data.datasets[0].data[index] = value;
+        radarChart.update();
+    }
 
     function getRandomInt(min, max) {
         min = Math.ceil(min);
