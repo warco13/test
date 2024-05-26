@@ -9,17 +9,17 @@
             display: flex;
             flex-direction: column;
             max-width: 200px;
-            margin-bottom: 20; /* Reduce bottom margin */
-            padding-bottom: 20; /* Reduce bottom padding */
+            margin-bottom: 0; /* Reduce bottom margin */
+            padding-bottom: 0; /* Reduce bottom padding */
         }
         .control {
-            margin-bottom: 5px;
+            margin-bottom: 5px; /* Reduce space between controls */
         }
         canvas {
-            max-width: 50%; /* Make the canvas responsive */
+            max-width: 20%; /* Adjust to desired size */
             height: auto; /* Maintain aspect ratio */
-            margin-top: 100; /* Reduce top margin */
-            padding-top: 100; /* Reduce top padding */
+            margin-top: 0; /* Reduce top margin */
+            padding-top: 0; /* Reduce top padding */
         }
     </style>
 </head>
@@ -76,8 +76,9 @@
                 <option value="4">Strongly Agree</option>
             </select>
         </div>
+        <button id="submit">Submit</button>
     </div>
-    <canvas id="radarChart" width="100" height="100"></canvas> <!-- Adjusted size -->
+    <canvas id="radarChart" width="300" height="300"></canvas> <!-- Adjusted size -->
 
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
