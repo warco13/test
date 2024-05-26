@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const average = groupValues.reduce((sum, value) => sum + value, 0) / groupValues.length;
             averages.push(average);
         }
-        return averages;
+        return averages*25;
     }
 
     function updateChartData(averages) {
