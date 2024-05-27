@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
             plugins: {
                 legend: {
                     display: true,
-                    position: 'left' // Change position to 'left', 'right', 'top', or 'bottom'
+                    position: 'right' // Change position to 'left', 'right', 'top', or 'bottom'
                 }
             },
             scales: {
