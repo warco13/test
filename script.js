@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     submitButton.addEventListener('click', function() {
         const averages = calculateAverages();
-        const crlValue = document.querySelector('input[name="questionCRL"]:checked').value; // Get CRL value
+        const crlValue = document.querySelector('input[name="CRL"]:checked').value; // Get CRL value
         const crlData = crlValues[crlValue]; // Select the corresponding CRL array
         updateChartData(averages, crlData);
         sendToGoogleSheets(averages, crlValue);
