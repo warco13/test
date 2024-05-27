@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             layout: {
                 padding: {
-                    top: -1000, // Reduce the top padding
+                    top: -300, // Reduce the top padding
                     bottom: -10 // Adjust the bottom padding if needed
                 }
             },
