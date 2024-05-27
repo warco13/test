@@ -56,6 +56,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     borderWidth: 3
                 }
             },
+            layout: {
+                padding: {
+                    top: 10, // Reduce the top padding
+                    bottom: 10 // Adjust the bottom padding if needed
+                }
+            },
             scales: {
                 r: {
                     angleLines: {
