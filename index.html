@@ -37,6 +37,19 @@
             justify-content: center; /* Centering the chart */
             margin-top: 5px; /* Adjusted margin */
             padding-top: 5px; /* Adjusted padding */
+            height: 500px; /* Set a fixed height for the container */
+            position: relative;
+        }
+        #radarChart {
+            max-width: 70%; /* Adjust to desired size */
+            height: auto; /* Maintain aspect ratio */
+            position: absolute;
+        }
+        .legend-container {
+            position: absolute;
+            right: 10px; /* Adjust as needed */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%);
         }
         canvas {
             max-width: 90%; /* Adjust to desired size */
