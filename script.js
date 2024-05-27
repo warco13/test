@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             pointHoverBorderColor: 'rgb(255, 99, 132)'
         },
         {
-            label: 'Successful Company at same Stage',
+            label: 'Average successful Company at same CRL',
             data: [...initialData], // Placeholder, will be updated on submit
             fill: true,
             backgroundColor: 'rgba(54, 162, 235, 0.2)',
