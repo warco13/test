@@ -62,6 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     bottom: -10 // Adjust the bottom padding if needed
                 }
             },
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'left' // Change position to 'left', 'right', 'top', or 'bottom'
+                }
+            },
             scales: {
                 r: {
                     angleLines: {
@@ -70,9 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     suggestedMin: 0,
                     suggestedMax: 100,
                     pointLabels: {
-                        callback: function(value, index, values) {
-                            return value.split(' ').join('\n'); // Display labels on the sides
-                        },
                         font: {
                             size: 12, // Adjust the font size if necessary
                             family: 'Arial', // Font family
