@@ -63,6 +63,22 @@
         #submit:hover {
             background-color: #45a049; /* Optional: Change background color on hover */
         }
+        .crl-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .crl-table th, .crl-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .crl-table th {
+            background-color: #f2f2f2;
+        }
+        .crl-table tr:hover {
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
@@ -70,22 +86,60 @@
     <div class="controls">
 
         <h3>Your Commercialisation Readiness Level</h3>
-        <div class="control">
-            <label for="CRL">Select your CRL</label>
-            <select id="CRL">
-                <option value="0">CRL 0</option>
-                <option value="1">CRL 1</option>
-                <option value="2">CRL 2</option>
-                <option value="3">CRL 3</option>
-                <option value="4">CRL 4</option>
-                <option value="5">CRL 5</option>
-                <option value="6">CRL 6</option>
-                <option value="7">CRL 7</option>
-                <option value="8">CRL 8</option>
-                <option value="9">CRL 9</option>
-                <option value="10">CRL 10</option>
-            </select>
-        </div>
+        <table class="crl-table">
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="radio" name="CRL" value="0" id="CRL0"></td>
+                    <td>Lore Ipsum 0</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="1" id="CRL1"></td>
+                    <td>Lore Ipsum 1</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="2" id="CRL2"></td>
+                    <td>Lore Ipsum 2</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="3" id="CRL3"></td>
+                    <td>Lore Ipsum 3</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="4" id="CRL4"></td>
+                    <td>Lore Ipsum 4</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="5" id="CRL5"></td>
+                    <td>Lore Ipsum 5</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="6" id="CRL6"></td>
+                    <td>Lore Ipsum 6</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="7" id="CRL7"></td>
+                    <td>Lore Ipsum 7</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="8" id="CRL8"></td>
+                    <td>Lore Ipsum 8</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="9" id="CRL9"></td>
+                    <td>Lore Ipsum 9</td>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="CRL" value="10" id="CRL10"></td>
+                    <td>Lore Ipsum 10</td>
+                </tr>
+            </tbody>
+        </table>
         <div class="separator"></div>
             
         <h3>E1. Market Spaces</h3>
