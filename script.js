@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             layout: {
                 padding: {
-                    top: -10, // Reduce the top padding
-                    bottom: 10 // Adjust the bottom padding if needed
+                    top: 0, // Reduce the top padding
+                    bottom: -10 // Adjust the bottom padding if needed
                 }
             },
             scales: {
@@ -68,7 +68,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         display: true
                     },
                     suggestedMin: 0,
-                    suggestedMax: 100
+                    suggestedMax: 100,
+                    pointLabels: {
+                        callback: function(value, index, values) {
+                            return value.split(' ').join('\n'); // Display labels on the sides
+                        },
+                        font: {
+                            size: 12, // Adjust the font size if necessary
+                            family: 'Arial', // Font family
+                            weight: 'bold', // Font weight
+                        }
+                    }
                 }
             }
         }
