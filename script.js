@@ -58,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             layout: {
                 padding: {
-                    top: -300, // Reduce the top padding
-                    bottom: -10 // Adjust the bottom padding if needed
+                    top: 10, // Reduce the top padding
+                    bottom: 10 // Adjust the bottom padding if needed
                 }
             },
             plugins: {
