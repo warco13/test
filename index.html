@@ -492,10 +492,16 @@
         
         <button id="submit">Submit</button>
     </div>
-    <canvas id="radarChart" width="300" height="300"></canvas> <!-- Adjusted size -->
+        </div>
+    <div class="chart-container">
+        <canvas id="radarChart" width="300" height="300"></canvas>
+    </div>
 
-    <!-- Include Chart.js library -->
+
+    <!-- Include Chart.js library with cache busting -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <!-- Add cache-busting version parameter to JavaScript -->
+    <script src="script.js?v=1.0"></script>
+
 </body>
 </html>
