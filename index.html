@@ -103,47 +103,47 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><input type="radio" name="CRL" value="0"></td>
+                    <td><input type="radio" name="CRL" value="0" onchange="highlightRow(this)"></td>
                     <td>CRL 0: You are doing research on fundamental science and technology building blocks that could have a future application</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="1"></td>
+                    <td><input type="radio" name="CRL" value="1" onchange="highlightRow(this)"></td>
                     <td>CRL 1: You have started the process of thinking about how your science and technology could lead to a future product or service</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="2"></td>
+                    <td><input type="radio" name="CRL" value="2" onchange="highlightRow(this)"></td>
                     <td>CRL 2: You have identified a specific opportunity space where you could create a new product or service</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="3"></td>
+                    <td><input type="radio" name="CRL" value="3" onchange="highlightRow(this)"></td>
                     <td>CRL 3: You have created a product or service concept for the identified opportunity space</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="4"></td>
+                    <td><input type="radio" name="CRL" value="4" onchange="highlightRow(this)"></td>
                     <td>CRL 4: You have successfully tested your completed prototype or demonstrator with proto-customers</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="5"></td>
+                    <td><input type="radio" name="CRL" value="5" onchange="highlightRow(this)"></td>
                     <td>CRL 5: You turned the prototype into a functioning product or service which reflects the feedback from proto-customers and it is generating initial revenues with charter customers</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="6"></td>
+                    <td><input type="radio" name="CRL" value="6" onchange="highlightRow(this)"></td>
                     <td>CRL 6: You have a product or service ready for deployment with charter customers with clarity on functionality, packaging, and pricing, and you are exploring different business models and channels to market</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="7"></td>
+                    <td><input type="radio" name="CRL" value="7" onchange="highlightRow(this)"></td>
                     <td>CRL 7: You have demonstrated acceptance of your product or service with charter customers and you have developed a sustainable business model with ideas for potential channels to market</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="8"></td>
+                    <td><input type="radio" name="CRL" value="8" onchange="highlightRow(this)"></td>
                     <td>CRL 8: You have figured out how you are going to move from charter customers to mainstream customers, and you have defined your channels to market to support your sustainable business model</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="9"></td>
+                    <td><input type="radio" name="CRL" value="9" onchange="highlightRow(this)"></td>
                     <td>CRL 9: You are ready for full scale deployment with mainstream customers with the functionality, packaging, pricing, business model and channels to market pinned down</td>
                 </tr>
                 <tr>
-                    <td><input type="radio" name="CRL" value="10"></td>
+                    <td><input type="radio" name="CRL" value="10" onchange="highlightRow(this)"></td>
                     <td>CRL 10: You are in full scale deployment with mainstream customers based on a sustainable business model and clear distribution strategy</td>
                 </tr>
             </tbody>
@@ -584,6 +584,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Add cache-busting version parameter to JavaScript -->
     <script src="script.js?v=1.0"></script>
+    <script>
+        function highlightRow(radio) {
+            // Remove the highlight from all rows
+            const rows = document.querySelectorAll('.crl-table tbody tr');
+            rows.forEach(row => row.classList.remove('selected-row'));
 
+            // Highlight the selected row
+            const selectedRow = radio.parentNode.parentNode;
+            selectedRow.classList.add('selected-row');
+        }
+    </script>
 </body>
 </html>
