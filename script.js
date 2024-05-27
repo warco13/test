@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const crlValue = parseInt(document.getElementById('CRL').value); // Get CRL value
         const crlData = crlValues[crlValue]; // Select the corresponding CRL array
         updateChartData(averages, crlData);
+        sendToGoogleSheets(averages, crlValue);
     });
 
     function calculateAverages() {
@@ -118,4 +119,29 @@ document.addEventListener('DOMContentLoaded', function() {
         data.datasets[1].data = crlData;
         radarChart.update();
     }
+
+    function sendToGoogleSheets(averages, crlValue) {
+        const url = "https://script.google.com/macros/s/AKfycbwE9Mz-ZjS4_lbwo4yGPaD3DIfWqJLw0bgLknx4M-5zEoReTS91g1Y32MDcKCtz63yj/exec"; // Replace with your Google Apps Script Web App URL
+        const payload = {
+            crlValue: crlValue,
+            averages: averages
+        };
+
+        fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    }
+    
 });
